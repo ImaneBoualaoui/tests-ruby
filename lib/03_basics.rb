@@ -53,26 +53,25 @@ end
 
 def magic_array(array)
 	#Enlever tout les array de array
-	marray = array.flatten
+	array = array.flatten
 
 	#Fonction de trie
 	array = array.sort
 
 	#tout les int du tableau sont multiplié par 2
 	for i in 0...array.length
-		array[i] = marray[i]*2
+		array[i] = array[i]*2
 	end
 
 	#tout les int modulo 3 sont retiré du tableau
 =begin
 	for i in 0...array.length
-		if ((array[i]%3) == 0)
+		if ((array[i]%3) === 0)
 			array = array.delete(array[i].to_s)
 		end
 	end
 =end
-
-	array = delete_if{|a| a%3 == 0}
+	array = array.delete_if{|a| a%3 == 0}
 
 	#Tout les doublons doivent être retiré
 	array = array.uniq

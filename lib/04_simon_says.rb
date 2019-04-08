@@ -54,8 +54,8 @@ def titleize(string)
 
 	string = string.capitalize
 
-	#string = string.split
-
+	string2 = string.split
+=begin
 	val = string.length
 
 	string[0..val].each do |i|
@@ -67,8 +67,21 @@ def titleize(string)
 		
 	end
 
+=end
+	string = ""
 
+	string2.each_with_index.map { |i| 
+		if i.length >3
+			i = i.capitalize
+			i = i + " "
+			string << i
+		else
+			i = i+ " "
+			string << i
+		end
+	 }
 	
+	string = string.chop
 	return string
 	
 end

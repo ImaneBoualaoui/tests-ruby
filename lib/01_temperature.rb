@@ -18,6 +18,7 @@ def ftoc(temperature)
 	elsif temperature == 68
 		return celsius = (temperature - 32)/1.8
 
+
 	else
 		celsius = (temperature - 32)/1.8
 		return celsius
